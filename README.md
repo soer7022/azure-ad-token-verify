@@ -54,7 +54,7 @@ async def get_current_user(
     scheme, _, token = auth_header.partition(" ")
     return get_verified_payload(
         token,
-        tenantId=_TENANT_ID,
+        tenant_id=_TENANT_ID,
         audience_uris=[_AUDIENCE_URI],
     )
 
